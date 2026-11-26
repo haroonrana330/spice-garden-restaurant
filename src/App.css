@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #26352c;
+  background: #fffdf8;
+}
+
+.website {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Navigation */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 8%;
+  background: #153d2b;
+  color: white;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #e9a23b;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 28px;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar nav a:hover {
+  color: #e9a23b;
+}
+
+.order-btn,
+.hero-btn {
+  display: inline-block;
+  background: #e9a23b;
+  color: #172b20;
+  padding: 13px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero */
+
+.hero {
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  padding: 70px 8%;
+  color: white;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 29, 20, 0.9),
+      rgba(12, 29, 20, 0.35)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1600")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.subtitle {
+  color: #d99532;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 22px;
+}
+
+.hero-description {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 480px;
+}
+
+.hero-btn:hover,
+.order-btn:hover {
+  background: #ffc15e;
+}
+
+/* Menu */
+
+.menu-section {
+  padding: 85px 8%;
+  text-align: center;
+}
+
+.menu-section h2,
+.about-section h2,
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-bottom: 24px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+}
+
+.food-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.food-card h3 {
+  font-size: 22px;
+  margin: 20px 10px 10px;
+}
+
+.food-card p {
+  color: #777;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.food-card strong {
+  color: #b8791e;
+  font-size: 19px;
+}
+
+/* About */
+
+.about-section {
+  background: #edf2e9;
+  padding: 80px 15%;
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.9;
+  font-size: 17px;
+  color: #59675d;
+}
+
+/* Contact */
+
+.contact-section {
+  padding: 85px 8%;
+  text-align: center;
+}
+
+.contact-section p {
+  color: #777;
+  margin-bottom: 28px;
+}
+
+/* Footer */
+
+footer {
+  background: #153d2b;
+  color: white;
+  padding: 25px;
+  text-align: center;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero {
+    min-height: 480px;
+    padding: 55px 7%;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-section h2,
+  .about-section h2,
+  .contact-section h2 {
+    font-size: 29px;
+  }
+}
